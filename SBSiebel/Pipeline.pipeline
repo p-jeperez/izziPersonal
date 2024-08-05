@@ -13,7 +13,7 @@
                 <con:actions>
                     <con1:route>
                         <con2:id>_ActionId-N3f57ffe7.3872fec4.0.191159ae6a1.N7ffa</con2:id>
-                        <con1:service ref="SBSiebel/BusinessService" xsi:type="ref:BusinessServiceRef" xmlns:ref="http://www.bea.com/wli/sb/reference"/>
+                        <con1:service ref="SBSiebel/BS/BusinessService" xsi:type="ref:BusinessServiceRef" xmlns:ref="http://www.bea.com/wli/sb/reference"/>
                         <con1:outboundTransform/>
                         <con1:responseTransform/>
                     </con1:route>
