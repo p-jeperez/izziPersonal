@@ -23,7 +23,7 @@
                             </con3:assign>
                         </con1:outboundTransform>
                         <con1:responseTransform>
-                            <con3:assign varName="req2" xmlns:con3="http://www.bea.com/wli/sb/stages/transform/config">
+                            <con3:assign varName="res2" xmlns:con3="http://www.bea.com/wli/sb/stages/transform/config">
                                 <con2:id>_ActionId-N3f57ffe7.3872fec4.0.191159ae6a1.N7feb</con2:id>
                                 <con3:expr>
                                     <con2:xqueryText>$body</con2:xqueryText>
