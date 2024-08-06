@@ -3,7 +3,7 @@
     <ser:coreEntry>
         <ser:binding type="abstract XML"/>
         <oper:operations enabled="true"/>
-        <ser:invoke ref="SBSiebel/PL/Pipeline" xsi:type="con:PipelineRef" xmlns:con="http://www.bea.com/wli/sb/pipeline/config"/>
+        <ser:invoke ref="SBSiebel/PL/PipelineX" xsi:type="con:PipelineRef" xmlns:con="http://www.bea.com/wli/sb/pipeline/config"/>
         <ser:xqConfiguration>
             <ser:snippetVersion>1.0</ser:snippetVersion>
         </ser:xqConfiguration>
@@ -12,7 +12,7 @@
         <tran:provider-id>jms</tran:provider-id>
         <tran:inbound>true</tran:inbound>
         <tran:URI>
-            <env:value>jms://localhost:7001/weblogic.jms.XAConnectionFactory/PipelineProxyServiceRequest</env:value>
+            <env:value>jms://localhost:7001/weblogic.jms.XAConnectionFactory/PSX</env:value>
         </tran:URI>
         <tran:inbound-properties/>
         <tran:provider-specific xsi:type="jms:JmsEndPointConfiguration" xmlns:jms="http://www.bea.com/wli/sb/transports/jms">
