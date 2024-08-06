@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:pipelineEntry xmlns:con="http://www.bea.com/wli/sb/pipeline/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:pipelineEntry xmlns:con="http://www.bea.com/wli/sb/pipeline/config">
     <con:coreEntry>
-        <con:binding type="Any SOAP" isSoap12="false" xsi:type="con:AnySoapBindingType"/>
+        <con:binding type="Any XML"/>
         <con:xqConfiguration>
             <con:snippetVersion>1.0</con:snippetVersion>
         </con:xqConfiguration>
     </con:coreEntry>
     <con:router>
         <con:flow>
-            <con:route-node name="RouteNode1" xmlns:con1="http://www.bea.com/wli/sb/stages/routing/config" xmlns:con2="http://www.bea.com/wli/sb/stages/config">
+            <con:route-node name="RouteNode1" xmlns:con1="http://www.bea.com/wli/sb/stages/routing/config" xmlns:con2="http://www.bea.com/wli/sb/stages/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <con:context/>
                 <con:actions>
                     <con1:route>
-                        <con2:id>_ActionId-N3f57ffe7.3872fec4.0.191159ae6a1.N7ff8</con2:id>
-                        <con1:service ref="SBSiebel/BS/BusinessService2" xsi:type="ref:BusinessServiceRef" xmlns:ref="http://www.bea.com/wli/sb/reference"/>
+                        <con2:id>_ActionId-N3f57ffe7.3872fec4.0.191159ae6a1.N7fe4</con2:id>
+                        <con1:service ref="SBSiebel/BS/BusinessService3" xsi:type="ref:BusinessServiceRef" xmlns:ref="http://www.bea.com/wli/sb/reference"/>
                         <con1:outboundTransform>
-                            <con3:assign varName="req2" xmlns:con3="http://www.bea.com/wli/sb/stages/transform/config">
-                                <con2:id>_ActionId-N3f57ffe7.3872fec4.0.191159ae6a1.N7fee</con2:id>
+                            <con3:assign varName="req3" xmlns:con3="http://www.bea.com/wli/sb/stages/transform/config">
+                                <con2:id>_ActionId-N3f57ffe7.3872fec4.0.191159ae6a1.N7fe1</con2:id>
                                 <con3:expr>
                                     <con2:xqueryText>$body</con2:xqueryText>
                                 </con3:expr>
                             </con3:assign>
                         </con1:outboundTransform>
                         <con1:responseTransform>
-                            <con3:assign varName="res2" xmlns:con3="http://www.bea.com/wli/sb/stages/transform/config">
-                                <con2:id>_ActionId-N3f57ffe7.3872fec4.0.191159ae6a1.N7feb</con2:id>
+                            <con3:assign varName="res3" xmlns:con3="http://www.bea.com/wli/sb/stages/transform/config">
+                                <con2:id>_ActionId-N3f57ffe7.3872fec4.0.191159ae6a1.N7fde</con2:id>
                                 <con3:expr>
                                     <con2:xqueryText>$body</con2:xqueryText>
                                 </con3:expr>
