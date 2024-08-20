@@ -12,7 +12,7 @@
         <tran:provider-id>jms</tran:provider-id>
         <tran:inbound>true</tran:inbound>
         <tran:URI>
-            <env:value>jms://localhost:7001/weblogic.jms.XAConnectionFactory/PipelineDProxyServiceRequest</env:value>
+            <env:value>jms://localhost:7001/SB_Siebel/PSD</env:value>
         </tran:URI>
         <tran:inbound-properties/>
         <tran:provider-specific xsi:type="jms:JmsEndPointConfiguration" xmlns:jms="http://www.bea.com/wli/sb/transports/jms">
