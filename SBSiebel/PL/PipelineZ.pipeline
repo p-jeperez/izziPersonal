@@ -21,22 +21,10 @@
                                     <con2:xqueryText>$body</con2:xqueryText>
                                 </con3:expr>
                             </con3:assign>
-                            <con3:assign varName="ReqZ" xmlns:con3="http://www.bea.com/wli/sb/stages/transform/config">
-                                <con2:id>_ActionId-N3f57ffe7.3872fec4.0.191159ae6a1.N7f1e</con2:id>
-                                <con3:expr>
-                                    <con2:xqueryText>$body</con2:xqueryText>
-                                </con3:expr>
-                            </con3:assign>
                         </con1:outboundTransform>
                         <con1:responseTransform>
                             <con3:assign varName="resZ" xmlns:con3="http://www.bea.com/wli/sb/stages/transform/config">
                                 <con2:id>_ActionId-N3f57ffe7.3872fec4.0.191159ae6a1.N7fe5</con2:id>
-                                <con3:expr>
-                                    <con2:xqueryText>$body</con2:xqueryText>
-                                </con3:expr>
-                            </con3:assign>
-                            <con3:assign varName="ResZ" xmlns:con3="http://www.bea.com/wli/sb/stages/transform/config">
-                                <con2:id>_ActionId-N3f57ffe7.3872fec4.0.191159ae6a1.N7f1b</con2:id>
                                 <con3:expr>
                                     <con2:xqueryText>$body</con2:xqueryText>
                                 </con3:expr>
