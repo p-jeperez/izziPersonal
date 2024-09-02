@@ -1,0 +1,14 @@
+mx\com\izzi\MicroServicio\dto\TaskDto.class
+mx\com\izzi\MicroServicio\mapper\TaskMapperImpl.class
+mx\com\izzi\MicroServicio\controller\GetTaskApi.class
+mx\com\izzi\MicroServicio\service\TaskService.class
+mx\com\izzi\MicroServicio\controller\AddTaskController.class
+mx\com\izzi\MicroServicio\mapper\TaskMapper.class
+mx\com\izzi\MicroServicio\repository\TaskRepository.class
+mx\com\izzi\MicroServicio\MicroServicioApplication.class
+mx\com\izzi\MicroServicio\service\TaskServiceImp.class
+mx\com\izzi\MicroServicio\controller\AddTaskApi.class
+mx\com\izzi\MicroServicio\controller\GetTaskController.class
+mx\com\izzi\MicroServicio\entity\Task.class
+mx\com\izzi\MicroServicio\entity\Task$TaskBuilder.class
+mx\com\izzi\MicroServicio\dto\TaskDto$TaskDtoBuilder.class

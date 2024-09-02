@@ -1,0 +1,11 @@
+C:\Users\Xideral\Documents\Estudio\GitHub\izziPersonal\SpringBoot\MicroServicio\src\main\java\mx\com\izzi\MicroServicio\controller\AddTaskApi.java
+C:\Users\Xideral\Documents\Estudio\GitHub\izziPersonal\SpringBoot\MicroServicio\src\main\java\mx\com\izzi\MicroServicio\controller\AddTaskController.java
+C:\Users\Xideral\Documents\Estudio\GitHub\izziPersonal\SpringBoot\MicroServicio\src\main\java\mx\com\izzi\MicroServicio\controller\GetTaskApi.java
+C:\Users\Xideral\Documents\Estudio\GitHub\izziPersonal\SpringBoot\MicroServicio\src\main\java\mx\com\izzi\MicroServicio\controller\GetTaskController.java
+C:\Users\Xideral\Documents\Estudio\GitHub\izziPersonal\SpringBoot\MicroServicio\src\main\java\mx\com\izzi\MicroServicio\dto\TaskDto.java
+C:\Users\Xideral\Documents\Estudio\GitHub\izziPersonal\SpringBoot\MicroServicio\src\main\java\mx\com\izzi\MicroServicio\entity\Task.java
+C:\Users\Xideral\Documents\Estudio\GitHub\izziPersonal\SpringBoot\MicroServicio\src\main\java\mx\com\izzi\MicroServicio\mapper\TaskMapper.java
+C:\Users\Xideral\Documents\Estudio\GitHub\izziPersonal\SpringBoot\MicroServicio\src\main\java\mx\com\izzi\MicroServicio\MicroServicioApplication.java
+C:\Users\Xideral\Documents\Estudio\GitHub\izziPersonal\SpringBoot\MicroServicio\src\main\java\mx\com\izzi\MicroServicio\repository\TaskRepository.java
+C:\Users\Xideral\Documents\Estudio\GitHub\izziPersonal\SpringBoot\MicroServicio\src\main\java\mx\com\izzi\MicroServicio\service\TaskService.java
+C:\Users\Xideral\Documents\Estudio\GitHub\izziPersonal\SpringBoot\MicroServicio\src\main\java\mx\com\izzi\MicroServicio\service\TaskServiceImp.java
