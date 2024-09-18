@@ -8,7 +8,7 @@ public interface TaskService {
     TaskDto addTask(TaskDto task);
     TaskDto upTask(TaskDto task);
     TaskDto getTask(Long id);
-    List<TaskDto> getTask();
-    void deleteTask(String id);
+    List<TaskDto> getTaskAll();
+    String deleteTask(String id);
 
 }

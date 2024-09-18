@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ebm="http://www.izzi.com.mx/ebm/product" xmlns:ebo="http://www.izzi.com.mx/ebo/product"
+            targetNamespace="http://www.izzi.com.mx/ebm/product" elementFormDefault="qualified">
+  <xsd:import schemaLocation="ProductEBO.xsd" namespace="http://www.izzi.com.mx/ebo/product"/>
+  <xsd:element name="item">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="idCorrelation" type="xsd:string"/>
+        <xsd:element name="productList">
+          <xsd:complexType>
+            <xsd:sequence maxOccurs="unbounded">
+            <xsd:element ref="ebo:product"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

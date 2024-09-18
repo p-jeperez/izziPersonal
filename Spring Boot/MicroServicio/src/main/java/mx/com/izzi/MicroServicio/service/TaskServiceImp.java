@@ -1,6 +1,6 @@
 package mx.com.izzi.MicroServicio.service;
 
-import lombok.AllArgsConstructor;
+
 import lombok.extern.slf4j.Slf4j;
 import mx.com.izzi.MicroServicio.dto.TaskDto;
 import mx.com.izzi.MicroServicio.entity.Task;
@@ -10,8 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+
 
 @Service
 @Slf4j
@@ -27,44 +28,67 @@ public class TaskServiceImp  implements TaskService{
     public TaskDto addTask(TaskDto task) {
         log.info("{}: add task request: {}, {} . [JP -> iniciar: addTask]",tag,task.getTitle(),task.getDescription());
         TaskDto taskDto = null;
-        if (Objects.nonNull(task)){
-            taskDto = getTaskDto(task,taskDto);
-            log.info(" add task success -> Id: {}. Title: {} [JP- > success: addTask]",taskDto.getId(), taskDto.getTitle());
-        }
+        taskDto = addTaskDto(task, taskDto);
+        log.info(" add task success -> Id: {}. Title: {} [JP- > success: addTask]",taskDto.getId(), taskDto.getTitle());
         return taskDto;
     }
-    private TaskDto getTaskDto(TaskDto task, TaskDto taskDto){
+    private TaskDto addTaskDto(TaskDto task, TaskDto taskDto){
         Task saved = repository.save(mapper.toTask(task));
-        if(Objects.nonNull(saved)){
-            taskDto = mapper.toDto(saved);
-        }
+        taskDto = mapper.toDto(saved);
         return taskDto;
     }
 
     @Override
     public TaskDto upTask(TaskDto task) {
-        return null;
+        TaskDto taskDto = null;
+        return taskDto;
+
     }
 
     @Override
     public TaskDto getTask(Long id) {
         TaskDto taskDto = null;
-        Task taskObj = repository.getReferenceById(id);
-        if(Objects.nonNull(taskObj)){
-            log.info("{}: get Object task, Id: {}, Description: {} . [JP -> success: getReferenceById]",tag,taskObj.getTitle(),taskObj.getDescription());
+        try {
+            Task taskObj = repository.getReferenceById(id);
+            log.info("{}: get Object task, Id: {}, Description: {} . [JP -> success: getReferenceById]", tag, taskObj.getTitle(), taskObj.getDescription());
             taskDto = mapper.toDto(taskObj);
+        } catch (Exception e) {
+            taskDto = new TaskDto();
         }
         return taskDto;
     }
 
-
     @Override
-    public List<TaskDto> getTask() {
-        return List.of();
+    public List<TaskDto> getTaskAll() {
+        TaskDto taskDto = null;
+        List<Task> taskObjList = null;
+        List<TaskDto> listTaskDto =  new ArrayList<TaskDto>();
+        taskObjList = repository.findAll();
+        for (Task taskObj : taskObjList) {
+            taskDto = mapper.toDto(taskObj);
+            listTaskDto.add(taskDto);
+            log.info("{}: getAll List Task, Id: {}, Description: {} . [JP -> success: findAll]", tag, taskObj.getTitle(), taskObj.getDescription());
+        }
+        return listTaskDto;
     }
 
     @Override
-    public void deleteTask(String id) {
-
+    public String deleteTask(String id) {
+        String response = null;
+        try {
+            log.info("{}: delete Object task, Id: {}. [JP -> Iniciar: deleteTask]",tag,id);
+            if (repository.existsById(Long.parseLong(id))){
+                repository.deleteById(Long.parseLong(id));
+                response = "OK, ";
+                log.info("{}: OK delete Object task, Id: {}. [JP -> success: deleteTask]",tag,id);
+            }else{
+                response = "KO, No existe registro para borrar";
+                log.info("{}: KO delete Object task, Id: {}. [JP -> Not found id: deleteTask]",tag,id);
+            }
+            return response;
+        } catch (Exception e) {
+            log.info("{}: KO delete Object task, Id: {}. [JP -> Exception: deleteTask], {} ",tag,id,e.getMessage());
+            return "KO, " + e.getMessage();
+        }
     }
 }
