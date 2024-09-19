@@ -1,0 +1,44 @@
+  → Comando para generar XML
+  
+  xjc -d java -p obj ProductEBM.xsd
+  
+    
+  → DDL de base de datos:
+  
+  CREATE TABLE "SYSTEM"."PRODUCT" 
+   (	"ID" NUMBER NOT NULL ENABLE, 
+	"NAME" VARCHAR2(20 BYTE), 
+	"SKU" NUMBER, 
+	"PRICE" NUMBER, 
+	"CREATION_DATE" DATE, 
+	"TYPE" VARCHAR2(50 BYTE)
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+  
+  
+  → Ejemplo de XML que jenera y envia JMS/SAF:
+  
+  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<item xmlns="http://www.izzi.com.mx/ebm/product" xmlns:ns2="http://www.izzi.com.mx/ebo/product">
+    <idCorrelation>VIDEO-aa8a0bea-e199-442a-adfe-b37031e40e62</idCorrelation>
+    <productList>
+        <ns2:product>
+            <ns2:id>1</ns2:id>
+            <ns2:name>Jesús</ns2:name>
+            <ns2:sku>51247</ns2:sku>
+            <ns2:price>6</ns2:price>
+            <ns2:creationDate>2024-09-16 20:35:44.0</ns2:creationDate>
+        </ns2:product>
+        <ns2:product>
+            <ns2:id>2</ns2:id>
+            <ns2:name>Tatis</ns2:name>
+            <ns2:sku>51265</ns2:sku>
+            <ns2:price>7</ns2:price>
+            <ns2:creationDate>2024-09-17 22:04:25.0</ns2:creationDate>
+        </ns2:product>
+    </productList>
+</item>
