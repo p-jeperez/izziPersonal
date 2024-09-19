@@ -13,7 +13,6 @@ import javax.naming.NamingException;
 import java.util.Hashtable;
 
 @Slf4j
-@Component
 public class JmsImpl implements Jms{
 
     @Value("${izzi.jms.server.url}")

@@ -4,6 +4,7 @@ import mx.com.izzi.student.controller.in.ProductRequest;
 import mx.com.izzi.student.controller.out.ProductResponse;
 import mx.com.izzi.student.handler.HealthResponse;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +20,9 @@ public interface App {
 
     @GetMapping
     public HealthResponse getHealth();
+
+    @GetMapping
+    public ResponseEntity<byte[]> getFileCsv();
 
 
 
